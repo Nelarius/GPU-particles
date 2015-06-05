@@ -1,6 +1,6 @@
 CC=g++
 
-COMPILER_INCLUDES = -I. -IC:/dev/glm -IC:/dev/glew-1.12.0/glew-1.12.0/include -IC:/dev/SDL2-devel-2.0.3-mingw/SDL2-2.0.3/x86_64-w64-mingw32/include
+COMPILER_INCLUDES = -I ./src -IC:/dev/glm -IC:/dev/glew-1.12.0/glew-1.12.0/include -IC:/dev/SDL2-devel-2.0.3-mingw/SDL2-2.0.3/x86_64-w64-mingw32/include
 
 LINKER_INCLUDES = -LC:/dev/SDL2-devel-2.0.3-mingw/SDL2-2.0.3/lib/x86 -LC:/dev/glew-1.12.0/glew-1.12.0/lib
 
@@ -11,7 +11,7 @@ LDFLAGS =
 EXECUTABLE =
 
 ifeq ($(OS),Windows_NT)
-	CFLAGS += -I../src -IC:/dev/glm -IC:/dev/glew-1.12.0/glew-1.12.0/include -IC:/dev/SDL2-devel-2.0.3-mingw/SDL2-2.0.3/x86_64-w64-mingw32/include -IC:/dev/yaml-cpp/include -IC:/dev/boost_1_58_0 $(COMPILER_INCLUDES)
+	CFLAGS += $(COMPILER_INCLUDES)
 	LDFLAGS += -lopengl32 -lglew32 -lmingw32 -lSDL2main -lSDL2 $(LINKER_INCLUDES)
 	EXECUTABLE += app.exe
 else
@@ -45,8 +45,14 @@ all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJ)
 	$(CC) -o $(EXECUTABLE) $(OBJ) $(LDFLAGS)
+	
+resources:
+	cp src/settings.txt .
+	cp -r src/data .
 
 .PHONY: clean
 
 clean:
 	rm $(OBJ) $(EXECUTABLE)
+	rm settings.txt
+	rm -r data/
