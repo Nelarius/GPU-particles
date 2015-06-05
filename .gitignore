@@ -1,0 +1,43 @@
+# C++
+#Compiled object files
+*.o
+*.obj
+*.lo
+*.slo
+
+#Compiled dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.out
+*.app
+*.exe
+toothie
+test
+toothie_linux
+
+# Code::blocks project files
+*.cbp
+*.layout
+*.depend
+src/bin
+src/obj
+
+# CodeLite project files
+.codelite/
+.clang/
+*.workspace
+*.project
+particles/
+particles.tags
+
+# 3d file format
+*.ply
+*.off
+*.obj
+
+# text files
+*.txt
+*.dat
