@@ -1,0 +1,32 @@
+
+app: {
+
+    # I was able to raise this up to 65125!
+    particles_per_workgroup : 128
+    workgroups: 20000
+    attractor_movement_speed: 0.00005
+
+    window: {
+        screen_width: 1800
+        screen_height: 950
+
+        opengl_major_version: 4
+        opengl_minor_version: 3
+
+        stencil_buffer_bits: 8
+        depth_buffer_bits: 24
+    }
+
+    camera : {
+        vertical_fov: 45.0  # degrees!
+        near_plane: 0.1
+        far_plane: 5000.0
+        min_radius: 5.0
+        max_radius: 500.0
+        dolly_sensitivity: 0.1
+        orbit_sensitivity: 0.008
+        pan_sensitivity: 0.001
+        view_as_perspective: "true"
+    }
+}
+
