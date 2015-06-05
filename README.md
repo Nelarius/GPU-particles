@@ -1,6 +1,8 @@
 # GPU-particles
 ![particles in action](https://cdn.rawgit.com/Nelarius/GPU-particles/master/images/screenie.png)
 
+A small program I wrote for the purpose of learning to use OpenGL compute shaders, and figuring out a good way to organize OpenGL code.
+
 ## Build
 
 ### Linux
