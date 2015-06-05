@@ -38,6 +38,3 @@ particles.tags
 *.off
 *.obj
 
-# text files
-*.txt
-*.dat
