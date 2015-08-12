@@ -3,6 +3,12 @@
 
 A small program I wrote for the purpose of learning to use OpenGL compute shaders, and figuring out a good way to organize OpenGL code.
 
+## Release
+
+The release contains a build for Windows only, currently.
+
+Camera controls: left mouse to orbit, mouse wheel to zoom, right mouse to pan.
+
 ## Build
 
 ### Linux
